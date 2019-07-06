@@ -1,0 +1,11 @@
+Issue: 
+User was able to drop all images in one drop zone and these images overlap each other and became undragable.
+
+Solution:
+To solve this problem firstly we should check this zone have a child or not before adding another.
+
+Instructions:
+1) Go the the "zone.addEventListener("drop", function(e){})" function you will get access to target the drop zone.
+2) To check zone already have child or not use the "zone.Children.length"
+3) If the condition is true use "e.target.appendChild(document.querySelector('#${draggedElement}'));"
+4) If step 3 is isn't working use console.log("Zone already has an element in it.")

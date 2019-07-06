@@ -1,0 +1,10 @@
+Issue:
+When user choose new background in drag zone previous images weren't deleted itself.
+
+Solution:
+For this we have to catch the images which are in drag zone and when user select new background these images should be append in puzzle-pieces container .
+
+Instructions:
+1) change the variable "pieceBoard" from "const" to "let" so it will allow it to make changes while selection of different backgrounds.
+2) create a new function "resetPuzzlePieces" which sent back the images in drag zone as an array "deletedImages"
+3) Move to "switchImage" function and append "deletedImages" to "piecesBoard"
